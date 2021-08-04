@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ShambaTech Solutions</string>
+    <string name="copyright">©ShambaTech Solutions</string>
+    <string name="temperatureLabel">Temperature Data:</string>
+    <string name="humidityLabel">Humidity Data:</string>
+    <string name="lightIntensityLabel">Light Intensity Data:</string>
+    <string name="camera1">Camera 1</string>
+    <string name="camera2">Camera 2</string>
+    <string name="camera3">Camera 3</string>
+    <string name="camera4">Camera 4</string>
+    <string name="missionStatement">
+        We innovate and provide solutions for small scale and large-scale farmers through use of IoT and microprocessor technology. We are exploring newer technologies such as cellular IoT, machine leaning and AI to provide you the best experience and increase your yield.
+
+Join us as we reimagine the farm of the future.
+
+    </string>
+</resources>

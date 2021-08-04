@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcircuit"
+    tools:context=".surveillance">
+
+
+<!-- ................................................................................ -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecamerafartop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecamerafarbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameralabeltop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameramiddletop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameramiddlebottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameralabelbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecamerafarleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecamerafarright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameramiddleleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinecameramiddleright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <VideoView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guidelinecamerafarleft"
+        app:layout_constraintEnd_toStartOf="@id/guidelinecameramiddleleft"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecamerafartop"
+        app:layout_constraintBottom_toTopOf="@id/guidelinecameramiddletop"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/camera1"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/guidelinecamerafarleft"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecamerafartop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelinecameralabeltop"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <VideoView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guidelinecameramiddleright"
+        app:layout_constraintEnd_toStartOf="@id/guidelinecamerafarright"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecamerafartop"
+        app:layout_constraintBottom_toTopOf="@id/guidelinecameramiddletop"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/camera2"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/guidelinecameramiddleright"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecamerafartop"
+        app:layout_constraintBottom_toBottomOf="@id/guidelinecameralabeltop"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <VideoView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guidelinecameramiddleright"
+        app:layout_constraintEnd_toStartOf="@id/guidelinecamerafarright"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecameramiddlebottom"
+        app:layout_constraintBottom_toTopOf="@id/guidelinecamerafarbottom"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/camera4"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/guidelinecameramiddleright"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecameramiddlebottom"
+        app:layout_constraintBottom_toBottomOf="@id/guidelinecameralabelbottom"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <VideoView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelinecamerafarbottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelinecameramiddleleft"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guidelinecamerafarleft"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecameramiddlebottom"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/camera3"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/guidelinecamerafarleft"
+        app:layout_constraintTop_toBottomOf="@id/guidelinecameramiddlebottom"
+        app:layout_constraintBottom_toBottomOf="@id/guidelinecameralabelbottom"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

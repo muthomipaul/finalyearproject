@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sensorsRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcircuit"
+    tools:context=".sensors">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ...................................................................................... -->
+        <!-- guidelines -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsfarleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsfarright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsfartop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsfarbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensortopbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsmiddletop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsmiddlebottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorsbottomtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorslabeltopbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorslabelmiddlebottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.39" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinesensorslabelbottombottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <!-- end of guidelines -->
+
+
+        <!-- sensor data display textviews -->
+
+        <TextView
+            android:id="@+id/temperatureData"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:accessibilityPaneTitle="Temp data"
+            android:background="@drawable/sensor_data_textview_customization"
+            android:hint="sensor data"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensortopbottom"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorslabeltopbottom"
+            app:layout_constraintVertical_bias="1.0">
+
+
+
+        </TextView>
+
+        <!-- end of sensor data textviews -->
+
+        <!-- sensor data textviews labels-->
+        <TextView
+            android:id="@+id/humidityData"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:accessibilityPaneTitle="Temp data"
+            android:background="@drawable/sensor_data_textview_customization"
+            android:hint="sensor data"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensorsmiddlebottom"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorslabelmiddlebottom"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/lightIntensityData"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:accessibilityPaneTitle="Temp data"
+            android:background="@drawable/sensor_data_textview_customization"
+            android:hint="sensor data"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensorsfarbottom"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorslabelbottombottom"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/sensor_label_textview_customization"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:text="@string/temperatureLabel"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensorslabeltopbottom"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorsfartop" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/sensor_label_textview_customization"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:text="@string/humidityLabel"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensorslabelmiddlebottom"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorsmiddletop" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/sensor_label_textview_customization"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:text="@string/lightIntensityLabel"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guidelinesensorslabelbottombottom"
+            app:layout_constraintLeft_toRightOf="@id/guidelinesensorsfarleft"
+            app:layout_constraintRight_toLeftOf="@id/guidelinesensorsfarright"
+            app:layout_constraintTop_toBottomOf="@id/guidelinesensorsbottomtop" />
+
+
+        <!-- ...................................................................................... -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
